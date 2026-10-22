@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>病例報告：藥物性肝損傷 (DILI) 與神經學評估</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f0f9ff; /* sky-50 */
+            color: #1e3a8a; /* blue-900 */
+        }
+        .card {
+            background-color: #ffffff;
+            border-left: 6px solid #3b82f6; /* blue-500 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-title {
+            color: #1e40af; /* blue-800 */
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #bfdbfe; /* blue-200 */
+            padding-bottom: 0.5rem;
+        }
+        .timeline-date {
+            font-weight: 700;
+            color: #2563eb; /* blue-600 */
+            width: 120px;
+            flex-shrink: 0;
+        }
+        .timeline-content {
+            border-left: 2px solid #bfdbfe;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6">
+
+    <div class="max-w-5xl mx-auto">
+        
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-2">病例報告：Anti-TB Drug-Induced Liver Injury (DILI)</h1>
+            <p class="text-base md:text-lg text-blue-700">59歲女性 / 乳癌病史 / 結核病用藥後急性肝炎與神經學病變</p>
+        </header>
+
+        <!-- Section 1: 第一次住院簡略與影響 -->
+        <div class="card">
+            <h2 class="section-title">1. 第一次住院 (8/2) 簡述及其影響</h2>
+            <p class="mb-2"><strong>病史與處置：</strong>患者因發現右肺上葉 (RUL) 結節入院。進行了支氣管鏡及 CT 導引下切片，病理報告顯示壞死性肉芽腫發炎且 Acid-fast 染色陽性，確診為肺結核 (Mycobacterial infection)。</p>
+            <p class="mb-2"><strong>對第二次住院的影響：</strong>因確診結核病，患者於 <strong>8/7 開始服用抗結核藥物 AKuriT-4 (RIF/INH/PZA/EMB)</strong>，並預防性給予 Pyridoxine。乳癌標靶藥物 Palbociclib 暫停。抗結核藥物中的 INH, RIF, PZA 具高度肝毒性，成為導致第二次住院 (9/24 急性肝炎/DILI) 的直接原因。</p>
+        </div>
+
+        <!-- Section 2: 詳細時間軸 -->
+        <div class="card">
+            <h2 class="section-title">2. 完整臨床時間軸 (門診與住院)</h2>
+            <div class="flex mb-2">
+                <div class="timeline-date">8/02 - 8/11</div>
+                <div class="timeline-content"><strong>第一次住院：</strong>診斷肺結核。8/7 開始使用 AKuriT-4，8/11 出院。</div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">8/25</div>
+                <div class="timeline-content"><strong>胸腔內科門診：</strong>持續開立 AKuriT-4 30天份，常規追蹤。</div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">9/22</div>
+                <div class="timeline-content"><strong>內科門診：</strong>患者出現疲倦、全身無力、食慾不振、噁心嘔吐數日。</div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">9/23</div>
+                <div class="timeline-content"><strong>胸腔內科門診：</strong>抽血檢查 Lipase, Amylase, 腫瘤指數 (CA153, CEA) 以及肝功能。</div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-blue-800 mt-4 mb-2">9/24 - 10/2 第二次住院 (DILI 處置)</h3>
+            <div class="flex mb-2">
+                <div class="timeline-date">9/24 (Day 1)</div>
+                <div class="timeline-content">
+                    <ul class="list-disc ml-5">
+                        <li><strong>檢驗與診斷：</strong>血液檢查驚見 GOT/AST 1039, GPT/ALT 1621, T-Bil 2.41。高度懷疑急性肝炎，建議立刻入院。</li>
+                        <li><strong>處置：</strong>立即停用所有抗結核藥物 (AKuriT-4)。</li>
+                        <li><strong>給藥：</strong>給予靜脈輸液 (Taita No.5)、保肝藥物 Silymarin、Pyridoxine。因 Anti-HBc 陽性，預防性給予抗B肝病毒藥物 Entecavir。給予 Metoclopramide 緩解噁心。</li>
+                        <li><strong>檢查：</strong>腹部超音波 (Fatty liver, 無膽管擴張)、心電圖。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">9/25 (Day 2)</div>
+                <div class="timeline-content">
+                    <ul class="list-disc ml-5">
+                        <li><strong>會診：</strong>腸胃內科會診，高度懷疑抗結核藥物引起的藥物性肝損傷 (DILI)。</li>
+                        <li><strong>檢查：</strong>全面排查病毒性肝炎 (HAV, HBV, HCV, CMV, EBV, HSV) 及自體免疫抗體。數值顯示 GOT 850, GPT 1419，開始下降。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">9/26 - 9/29 (Day 3-6)</div>
+                <div class="timeline-content">
+                    <ul class="list-disc ml-5">
+                        <li><strong>狀況：</strong>黃疸持續但症狀改善，無發燒或喘息，生命徵象穩定。持續支持性保肝治療。肝指數穩步下降 (9/28 GOT 319, GPT 866)。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">9/30 (Day 7)</div>
+                <div class="timeline-content">
+                    <ul class="list-disc ml-5">
+                        <li><strong>檢查：</strong>因患者主訴右手麻木，照會神經內科。安排四肢神經傳導速度 (NCV) 與定量感覺測試 (QST)。</li>
+                        <li><strong>神內建議：</strong>懷疑藥物引起之多發性神經病變，給予 NiCAmeTATE 及 Kentamin。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">10/1 (Day 8)</div>
+                <div class="timeline-content"><strong>狀況：</strong>黃疸及鞏膜黃疸顯著改善。評估病情穩定，準備出院。</div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">10/2 (Day 9)</div>
+                <div class="timeline-content"><strong>出院：</strong>辦理出院，改以門診追蹤治療。帶回保肝藥與神經用藥。</div>
+            </div>
+
+            <h3 class="text-xl font-bold text-blue-800 mt-4 mb-2">出院後門診追蹤</h3>
+            <div class="flex mb-2">
+                <div class="timeline-date">10/07</div>
+                <div class="timeline-content"><strong>胸腔內科門診：</strong>精神改善。抽血 GOT 62, GPT 158，肝功能持續恢復。</div>
+            </div>
+            <div class="flex mb-2">
+                <div class="timeline-date">10/09</div>
+                <div class="timeline-content"><strong>神經內科門診：</strong>主訴右手痠麻、雙側手關節壓痛。持續開立 NiCAmeTATE 與 Kentamin 治療神經病變。</div>
+            </div>
+        </div>
+
+        <!-- Section 3: 用藥時間軸 -->
+        <div class="card">
+            <h2 class="section-title">3. 完整用藥時間軸分析</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-blue-200 text-sm md:text-base">
+                    <thead>
+                        <tr class="bg-blue-100 text-blue-900">
+                            <th class="py-2 px-2 border-b whitespace-nowrap">藥物名稱 (適應症)</th>
+                            <th class="py-2 px-2 border-b">8/7 - 9/23 (門診)</th>
+                            <th class="py-2 px-2 border-b">9/24 - 10/2 (住院)</th>
+                            <th class="py-2 px-2 border-b">10/2 之後 (出院)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-2 border-b font-bold">AKuriT-4 (抗結核)</td>
+                            <td class="py-2 px-2 border-b text-center text-red-600 font-bold">使用中<br><span class="text-xs font-normal">(DILI主因)</span></td>
+                            <td class="py-2 px-2 border-b text-center">立刻停用</td>
+                            <td class="py-2 px-2 border-b text-center">停用</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-2 border-b font-bold">Pyridoxine (B6, 神經)</td>
+                            <td class="py-2 px-2 border-b text-center">使用中</td>
+                            <td class="py-2 px-2 border-b text-center">使用中</td>
+                            <td class="py-2 px-2 border-b text-center">使用中</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-2 border-b font-bold">Silymarin (保肝)</td>
+                            <td class="py-2 px-2 border-b text-center">無</td>
+                            <td class="py-2 px-2 border-b text-center text-blue-600 font-bold">開始使用<br><span class="text-xs font-normal">(治療肝炎)</span></td>
+                            <td class="py-2 px-2 border-b text-center text-blue-600">使用中</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-2 border-b font-bold">Entecavir (抗B肝病毒)</td>
+                            <td class="py-2 px-2 border-b text-center">無</td>
+                            <td class="py-2 px-2 border-b text-center text-blue-600 font-bold">開始使用<br><span class="text-xs font-normal">(9/24起持續)</span></td>
+                            <td class="py-2 px-2 border-b text-center text-blue-600">使用中</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-2 border-b font-bold">Metoclopramide (腸胃)</td>
+                            <td class="py-2 px-2 border-b text-center">無</td>
+                            <td class="py-2 px-2 border-b text-center text-blue-600">9/24 - 9/26 短期使用</td>
+                            <td class="py-2 px-2 border-b text-center">停用</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-2 border-b font-bold">Metoclopramide (腸胃)</td>
+                            <td class="py-2 px-2 border-b text-center">無</td>
+                            <td class="py-2 px-2 border-b text-center">症狀緩解使用</td>
+                            <td class="py-2 px-2 border-b text-center">使用中</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-2 border-b font-bold">NiCAmeTATE (神經循環)</td>
+                            <td class="py-2 px-2 border-b text-center">無</td>
+                            <td class="py-2 px-2 border-b text-center">9/30 神內建議加入</td>
+                            <td class="py-2 px-2 border-b text-center">使用中</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 4: DILI 數據與肝炎病毒檢測 -->
+        <div class="card">
+            <h2 class="section-title">4. DILI 相關數值、DynaMed 標準與肝炎檢測意義</h2>
+            
+            <div class="mb-4">
+                <h3 class="font-bold text-blue-800">📌 DynaMed 診斷標準 (DILI)</h3>
+                <p class="text-sm md:text-base mb-2">根據 DynaMed，急性 DILI 診斷需排除其他肝病，並符合以下任一條件：</p>
+                <ul class="list-disc ml-5 text-sm md:text-base mb-4 space-y-1">
+                    <li>ALT ≥ 5 倍正常值上限 (ULN) <span class="text-red-600 font-bold">➔ 本案 9/24 ALT 達 1621 (約 46 倍 ULN)，極度吻合。</span></li>
+                    <li>ALP ≥ 2 倍 ULN</li>
+                    <li>ALT ≥ 3 倍 ULN 且同時 T-Bilirubin > 2 倍 ULN <span class="text-red-600 font-bold">➔ 本案 T-Bil 達 2.41，亦符合此條件。</span></li>
+                </ul>
+                <p class="text-sm md:text-base"><strong>傷害分型 (R-ratio)：</strong> 本案 R-ratio > 5，屬於典型的 <strong>Hepatocellular (肝細胞損傷型)</strong>。</p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="font-bold text-blue-800">📌 肝炎病毒檢測的影響與意義</h3>
+                <p class="text-sm md:text-base">在 RUCAM 評分系統中，必須排除競爭性原因 (Competing causes) 才能確診 DILI。</p>
+                <ul class="list-disc ml-5 text-sm md:text-base space-y-1">
+                    <li><strong>排除急性病毒感染：</strong> 9/25 檢驗 HBsAg, Anti-HCV, HAV IgM, CMV IgM, HSV IgM, EBV IgM <strong>皆為陰性</strong>，成功排除了急性病毒性肝炎。</li>
+                    <li><strong>Anti-HBc 陽性之處置：</strong> 發現患者 Anti-HBc 呈現 Reactive (HBcIgG+)，代表曾感染過 B 型肝炎。在嚴重肝損傷或化療壓力下，B肝有再活化 (Reactivation) 的風險。因此入院首日 (9/24) 醫師預防性開立了 <strong>Entecavir (Baraclude)</strong> 以防止 B 肝病毒爆發，確保安全。</li>
+                </ul>
+            </div>
+
+            <!-- Chart.js 畫布 (修正手機版高度問題) -->
+            <div class="relative w-full h-[350px] sm:h-[450px] max-w-3xl mx-auto bg-white p-2 md:p-4 border border-blue-100 rounded">
+                <canvas id="liverChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Section 5: 神經學檢測 -->
+        <div class="card">
+            <h2 class="section-title">5. 神經學檢測 (9/30) 數據與意義</h2>
+            <p class="mb-2 text-sm md:text-base">患者於停藥後主訴右手痠麻及關節痛，照會神經內科進行以下檢查：</p>
+            <ul class="list-disc ml-5 mb-4 text-sm md:text-base space-y-2">
+                <li><strong>神經傳導速度 (NCV)：</strong> 顯示左側 F-EDB 與 F-AH 潛伏期延長 (Prolongation)。<br>
+                    <span class="text-blue-700">➜ <strong>意義：</strong> 提示可能存在左側 L5 神經根病變 (Left L5 radiculopathy)。</span>
+                </li>
+                <li><strong>定量感覺測試 (QST)：</strong> 異常。<br>
+                    <span class="text-blue-700">➜ <strong>意義：</strong> 提示可能存在小纖維神經病變 (Small fiber neuropathy)。</span>
+                </li>
+            </ul>
+            <p class="text-sm bg-blue-50 p-3 rounded border border-blue-200 leading-relaxed">
+                <strong>臨床關聯性：</strong> 抗結核藥物中的 INH (Isoniazid) 易導致周邊神經病變，雖然患者已預防性服用 Pyridoxine (B6)，但仍出現小纖維神經病變症狀。此外，患者之前使用的乳癌口服化療藥物 (Palbociclib) 也可能引發關節痛。神內給予末梢血管擴張劑 (NiCAmeTATE) 及綜合維他命 (Kentamin) 進行症狀治療。
+            </p>
+        </div>
+
+        <!-- Section 6: 血球數值變化 -->
+        <div class="card">
+            <h2 class="section-title">6. 血液常規數值 (CBC) 變化</h2>
+            <p class="text-sm md:text-base mb-4 leading-relaxed">患者因乳癌病史曾長期使用標靶藥物 (Palbociclib)，具備白血球偏低 (Neutropenia) 的基礎狀態。以下表格著重於第二次因急性肝炎 (DILI) 入院期間 (9/24 - 10/2) 對血球數值的影響：</p>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-blue-200 text-sm md:text-base text-center mb-4">
+                    <thead>
+                        <tr class="bg-blue-100 text-blue-900">
+                            <th class="py-2 px-2 border-b whitespace-nowrap">日期 (狀態)</th>
+                            <th class="py-2 px-2 border-b">WBC (10^3/uL)<br><span class="text-xs font-normal">正常: 3.04-8.54</span></th>
+                            <th class="py-2 px-2 border-b">Hb (g/dL)<br><span class="text-xs font-normal">正常: 12.0-16.0</span></th>
+                            <th class="py-2 px-2 border-b">Platelet (10^3/uL)<br><span class="text-xs font-normal">正常: 150-361</span></th>
+                            <th class="py-2 px-2 border-b">Mono. (%)<br><span class="text-xs font-normal">正常: 2.7-7.6</span></th>
+                            <th class="py-2 px-2 border-b">Eosin. (%)<br><span class="text-xs font-normal">正常: 0.2-7.3</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-2 border-b text-gray-500 whitespace-nowrap">8/10 (基準/第一次住院)</td>
+                            <td class="py-2 px-2 border-b text-gray-500">3.95</td>
+                            <td class="py-2 px-2 border-b text-gray-500">12.3</td>
+                            <td class="py-2 px-2 border-b text-gray-500">252</td>
+                            <td class="py-2 px-2 border-b text-red-400 font-bold">11.4</td>
+                            <td class="py-2 px-2 border-b text-gray-500">0.8</td>
+                        </tr>
+                        <tr class="bg-red-50">
+                            <td class="py-2 px-2 border-b font-bold text-red-800 whitespace-nowrap">9/24 (DILI 入院 Day 1)</td>
+                            <td class="py-2 px-2 border-b text-red-600 font-bold">3.43</td>
+                            <td class="py-2 px-2 border-b font-bold">13.5</td>
+                            <td class="py-2 px-2 border-b font-bold">156</td>
+                            <td class="py-2 px-2 border-b text-red-600 font-bold">14.6</td>
+                            <td class="py-2 px-2 border-b text-red-600 font-bold">0.0</td>
+                        </tr>
+                        <tr class="bg-red-50">
+                            <td class="py-2 px-2 border-b font-bold text-red-800 whitespace-nowrap">9/30 (DILI 入院 Day 7)</td>
+                            <td class="py-2 px-2 border-b text-red-600 font-bold">3.30</td>
+                            <td class="py-2 px-2 border-b font-bold">12.5</td>
+                            <td class="py-2 px-2 border-b text-red-600 font-bold">113 (偏低)</td>
+                            <td class="py-2 px-2 border-b text-red-600 font-bold">8.8</td>
+                            <td class="py-2 px-2 border-b text-red-600 font-bold">0.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="p-4 bg-blue-50 border border-blue-200 rounded">
+                <h4 class="font-bold text-blue-800 mb-2">🔍 第二次住院期間數值意義分析：</h4>
+                <ul class="list-disc ml-5 space-y-2 text-sm md:text-base leading-relaxed">
+                    <li><strong>白血球 (WBC)：</strong> 在 9/24 入院時 (3.43) 及住院一週後 (9/30 為 3.30) 持續在正常偏低範圍徘徊。這符合患者先前的免疫低下狀態，代表在此次嚴重的急性肝炎 (DILI) 發作期間，並未誘發嚴重的繼發性全身感染，也沒有出現白血球代償性暴增的現象，臨床上為相對穩定的指標。</li>
+                    <li><strong>血小板 (Platelet) 的消耗：</strong> 從 8 月份的 252，到 9/24 肝炎爆發入院時下降至 156，並在住院持續治療一週後 (9/30) 進一步降至 <strong>113 (低於正常值 150)</strong>。這種血小板低下的趨勢，在嚴重急性肝臟發炎期間十分常見；其原因可能包含全身發炎反應導致的消耗，或肝臟發炎導致生成血小板生成素減少。</li>
+                    <li><strong>單核球 (Monocyte) 異常偏高：</strong> 數值從基準的 11.4% 攀升至 9/24 的 14.6%，持續高於正常範圍 (2.7-7.6%)。單核球增多常見於慢性感染（如患者確診的結核病）以及嚴重發炎反應。這反映了結核桿菌感染與嚴重藥物性肝臟損傷的雙重影響。</li>
+                    <li><strong>嗜酸性白血球 (Eosinophil) 急速降至 0：</strong> 在 9/24 與 9/30 的急性肝炎住院期間，數值皆降為 0.0%。嗜酸性白血球顯著減少 (Eosinopenia) 是身體面臨極端生理壓力、嚴重發炎或急性肝衰竭早期常見的全身性壓力反應指標。</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Chart.js 腳本 -->
+    <script>
+        const ctx = document.getElementById('liverChart').getContext('2d');
+        const liverChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['8/10 (基準)', '9/24 (入院)', '9/25', '9/28', '9/30', '10/7 (門診)'],
+                datasets: [
+                    {
+                        label: 'AST / GOT (正常 <35)',
+                        data: [32, 1039, 850, 319, 175, 62],
+                        borderColor: 'rgb(220, 38, 38)', // red-600
+                        backgroundColor: 'rgba(220, 38, 38, 0.1)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'ALT / GPT (正常 <35)',
+                        data: [30, 1621, 1419, 866, 587, 158],
+                        borderColor: 'rgb(37, 99, 235)', // blue-600
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Total Bilirubin (正常 <1.2)',
+                        data: [0.83, 2.41, 2.41, 2.34, 2.90, 1.63],
+                        borderColor: 'rgb(217, 119, 6)', // amber-600
+                        backgroundColor: 'rgba(217, 119, 6, 0.1)',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // 關鍵設定：取消強制比例，使圖表適應容器高度
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '肝功能 (AST/ALT) 與 總膽紅素 (T-Bil) 變化趨勢圖',
+                        font: { size: 14 } // 稍微縮小標題以適應手機
+                    },
+                    legend: {
+                        labels: {
+                            font: { size: 12 }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            font: { size: 10 } // 手機版 X 軸字體調小
+                        }
+                    },
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: { display: true, text: 'AST / ALT (IU/L)', font: { size: 12 } },
+                        suggestedMax: 1800
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: { display: true, text: 'T-Bil (mg/dL)', font: { size: 12 } },
+                        suggestedMax: 4,
+                        grid: { drawOnChartArea: false }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
